@@ -20,17 +20,17 @@ public class Conta {
 		if(valor>limite || valor>saldo || valor<=0) {
 			return false;
 		}
-		saldo -= valor;
-		limite -= valor;
-		return true;
-		
+		else {
+			saldo -= valor;
+			return true;
+		}
 	}
 	
 	boolean depositar(double valor) {
 		if (valor<=0) {
 			return false;
 		}
-		saldo += valor;
+			saldo += valor;
 			return true;
 		
 	}
@@ -41,4 +41,16 @@ public class Conta {
 		System.out.println("Saldo: " + saldo);
 		System.out.println("Limite: " + limite);
 	}
+	
+	boolean transferir(Conta destino,float valor) {
+		if(valor>limite || valor>saldo || valor<=0) {
+			return false;
+		}
+		else {
+			this.saldo -= valor;
+			destino.saldo += valor;
+			return true;
+		}
+	}
+	
 }
