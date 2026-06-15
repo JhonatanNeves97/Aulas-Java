@@ -1,1 +1,24 @@
-/bin/
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# Build outputs
+bin/
+target/
+out/
+
+# Logs
+*.log
+
+# Compiled class files
+*.class
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# IDEs
+*.iml
+.idea/
